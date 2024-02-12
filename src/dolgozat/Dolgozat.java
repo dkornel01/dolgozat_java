@@ -26,7 +26,6 @@ public class Dolgozat {
         vez.tabla_kiiras();
         vez.uresOsszealitó();
         kiirasFájlba();
-       
     }
     public void kiirasFájlba() throws IOException{
         File myObj = new File("tabla64.txt");

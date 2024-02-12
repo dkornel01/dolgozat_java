@@ -94,9 +94,9 @@ public class Table {
     }
      public String Megjelenito(){
         String meg="";
-        for (int i=0;i<this.T.length;i++){
-            for (int x=0;x<this.T.length;x++){
-                meg+=this.T[i][x];
+        for (int i=0;i<T.length;i++){
+            for (int x=0;x<T.length;x++){
+                meg+=T[i][x];
             }
             meg+=";";
         }

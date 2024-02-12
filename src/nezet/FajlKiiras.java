@@ -28,5 +28,5 @@ public class FajlKiiras {
     }
     public String Fajlkiirás(String szoveg,int i){
         return szoveg+" "+i;
-    } 
+    }; 
 }

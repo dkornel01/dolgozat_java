@@ -3,6 +3,7 @@ package dolgozat;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import model.Table;
@@ -28,8 +29,8 @@ public class Dolgozat {
         kiirasFájlba();
     }
     public void kiirasFájlba() throws IOException{
-        File myObj = new File("tabla64.txt");
-        FileWriter myWriter = new FileWriter("table64.txt");
+        File myObj = new File("table64.txt");
+        PrintWriter writer = new PrintWriter("table64.txt");
         for (int i=0;i<64;i++) {
             Table table=new Table("*");
             FajlKiiras nezet=new FajlKiiras();
@@ -37,11 +38,12 @@ public class Dolgozat {
             FájlKiirasKonzolra vez=new FájlKiirasKonzolra(table,nezet);
             String[] tarto=vez.FajlMegjelenito().split(";");
             for (int x=0;x<tarto.length;x++){
-                myWriter.write(tarto[x]);
+                writer.println(tarto[x]);
             }
-            myWriter.write(vez.OszlopUresOsszealitó());
-            myWriter.write(vez.SorUresOsszealitó());
+            writer.println(vez.OszlopUresOsszealitó());
+            writer.println(vez.SorUresOsszealitó());
         }
+        writer.close();
         
     }
     

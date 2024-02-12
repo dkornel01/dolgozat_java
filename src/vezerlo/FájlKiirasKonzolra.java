@@ -25,6 +25,6 @@ public class FájlKiirasKonzolra {
     }
     public String OszlopUresOsszealitó(){
             int x=modell.ÜresSorokSzáma();
-            return nezet.Fajlkiirás("sorok:", x);
+            return nezet.Fajlkiirás("oszlop:", x);
     }
 }
